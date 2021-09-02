@@ -2,8 +2,8 @@
 
 SPELLING BEE RULES:
 
--words must contain 4 or more letters
--words must inclue the center letter
--no obscure words, hyphenated words, or any proper nouns
--no curse words
--letters can be used more than once
+1. words must contain 4 or more letters
+2. words must inclue the center letter
+3. no obscure words, hyphenated words, or any proper nouns
+4. no curse words
+5. letters can be used more than once

@@ -40,12 +40,12 @@ class NewYorkTimes:
         soup = BeautifulSoup(source, "html.parser")
         # .string returns the text but doesn't return a string so we have to
         # cast it
-        game_string = str(soup.find(id="js-hook-game-wrapper").find("script").string)
+        game_string = str(
+            soup.find(id="js-hook-game-wrapper").find("script").string)
         # We don't need the variable assignment
         game_string = game_string[game_string.find('{'):]
         game_data = json.loads(game_string)
-        self.yesterdays_answers = game_data['yesterday']['answers']
-        self.required_letters = game_data['today']['centerLetter']
-        self.optional_letters = game_data['today']['outerLetters']
-        self.todays_pangrams = game_data['today']['pangrams']
-        self.todays_answers = game_data['today']['answers']
+        self.required_letters = set(game_data['today']['centerLetter'])
+        self.optional_letters = set(game_data['today']['outerLetters'])
+        self.todays_pangrams = set(game_data['today']['pangrams'])
+        self.todays_answers = set(game_data['today']['answers'])

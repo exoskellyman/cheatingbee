@@ -1,6 +1,8 @@
 # &#128029; Cheating Bee &#128029;
 
-# INSTALLATION
+Cheating Bee is a [Twitter bot](https://twitter.com/CheatingBee) designed to Cheat at the New York Times Spelling Bee
+
+## INSTALLATION
 
 First clone this repository
 

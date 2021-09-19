@@ -9,9 +9,22 @@ import json
 
 
 class NewYorkTimes:
-    '''
-    Class for scraping daily NYTimes spelling bee info
-    '''
+    """
+    A class for scraping the New York Times Spelling Bee page information
+
+    ...
+
+    Attributes
+    ----------
+    required_letters: set
+        A set of the letters required in the Spelling Bee answers
+    optional_letters: set
+        A set of the letters optional in the Spelling Bee answers
+    todays_answers: set
+        The answers of todays New York Times Spelling Bee
+    todays_pangrams: set
+        The pangrams in the answers of todays New York Times Spelling Bee
+    """
     URL = "https://www.nytimes.com/puzzles/spelling-bee"
     PLAY_BUTTON_CLASS = "pz-moment__button.primary"
 
@@ -32,11 +45,19 @@ class NewYorkTimes:
             # Play button might not be in view, have to move to it to click it
             ActionChains(browser).move_to_element(play_button).perform()
             play_button.click()
-            self.load_game_data(browser.page_source)
+            self.__load_game_data(browser.page_source)
         finally:
             browser.close()
 
-    def load_game_data(self, source):
+    def __load_game_data(self, source):
+        """Uses BeautifulSoup to parse the New York Times Spelling Bee page
+        and load the game data into instance variables
+
+        Parameters
+        ----------
+        source: driver.page_source, required
+            The New York Times Spelling Bee page source code to be parsed
+        """
         soup = BeautifulSoup(source, "html.parser")
         # .string returns the text but doesn't return a string so we have to
         # cast it

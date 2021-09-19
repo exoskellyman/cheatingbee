@@ -1,9 +1,19 @@
-# &#128029; cheatingbee &#128029;
+# &#128029; Cheating Bee &#128029;
 
-SPELLING BEE RULES:
+# INSTALLATION
 
-1. words must contain 4 or more letters
-2. words must inclue the center letter
-3. no obscure words, hyphenated words, or any proper nouns
-4. no curse words
-5. letters can be used more than once
+First clone this repository
+
+In order to run the project you must install python 3.7 and [pipenv](https://pipenv.pypa.io/en/latest/) then navigate to directory and run:
+
+    $ pipenv install
+    $ pipenv shell
+
+When you want to run the bot, from the pipenv shell use:
+
+    $ python cheatingbee
+
+To run tests you must run must install developer dependencies and run:
+
+    $ pipenv install -d
+    $ python -m pytest

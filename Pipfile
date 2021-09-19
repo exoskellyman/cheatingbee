@@ -10,6 +10,8 @@ selenium = "*"
 tweepy = "*"
 
 [dev-packages]
+pytest = "*"
+pytest_mock = "*"
 
 [requires]
 python_version = "3.7"

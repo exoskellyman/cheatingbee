@@ -14,5 +14,5 @@ def main():
     twitter_bot = Twitter()
     twitter_bot.post_tweet(
         list(solver_answers.intersection(nyt.todays_answers)),
-        list(nyt.todays_pangrams),
-        list(nyt.todays_answers))
+        list(nyt.todays_answers),
+        list(nyt.todays_pangrams))

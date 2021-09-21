@@ -22,7 +22,7 @@ When you want to run the bot, from the pipenv shell use:
 
     $ python cheatingbee
 
-To run tests you must run must install developer dependencies and run:
+To run tests you must install developer dependencies and run:
 
     $ pipenv install -d
     $ python -m pytest

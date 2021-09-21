@@ -53,11 +53,11 @@ class Twitter:
                 file=pic,
                 possibly_sensitive=True)
         if len(solver_answers)/len(nyt_answers) == 1:
-            tweet = "Cheating Bee got all {} answers of todays #SpellingBee!🐝🎓"
+            tweet = "Cheating Bee got all {} answers on todays #SpellingBee!🐝🎓"
             tweet = tweet + "\n\nNeed help with todays puzzle? Click the image below!"
             tweet = tweet.format(len(nyt_answers))
         else:
-            tweet = "Cheating Bee got {}/{} answers of todays #SpellingBee!🐝"
+            tweet = "Cheating Bee got {}/{} answers on todays #SpellingBee!🐝"
             tweet = tweet + "\n\nNeed help with todays puzzle? Click the image below!"
             tweet = tweet.format(len(solver_answers), len(nyt_answers))
         self.api.update_status(status=tweet, media_ids=[media.media_id])

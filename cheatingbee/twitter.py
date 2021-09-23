@@ -52,7 +52,7 @@ class Twitter:
                 filename=str(datetime.date.today()),
                 file=pic,
                 possibly_sensitive=True)
-        if len(solver_answers)/len(nyt_answers) == 1:
+        if len(solver_answers) == len(nyt_answers):
             tweet = "Cheating Bee got all {} answers on todays #SpellingBee!🐝🎓"
             tweet = tweet + "\n\nNeed help with todays puzzle? Click the image below!"
             tweet = tweet.format(len(nyt_answers))
@@ -84,17 +84,17 @@ class Twitter:
         return text
 
     def __create_pic(self, text):
-        """Formats a list of words into a string with rows five words long
+        """Creates an image with and fills it with the text provided
 
         Parameters
         ----------
-        word_list: list, required
-            A list of words to be formatted to a string
+        text: str, required
+            The text string to be drawn on the picture
 
         Returns
         -------
-        str
-            The word list composed to a string with rows of five words
+        file
+            The picture as a file object
         """
         font_size = 20
         # number of lines plus 3 for padding
